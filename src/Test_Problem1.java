@@ -5,18 +5,28 @@ import problem1.*;
 public class Test_Problem1 {
 
 	@Test
-	public void testing_car() {
-        Car car = new Car("abc", "def", 2000);
-		assertEquals("abc", car.make);
-		assertEquals("def", car.model);
-		assertEquals(2000, car.year);
+	public void testing_linkedlist() {
+        LinkedList list = new LinkedList();
+		list.insert(5);
+		list.insert(10);
+		list.insert(15);
+		
+		assertEquals(3, list.size());
 	}
 
 	@Test
-	public void testing_user() {
-        Buyer buyer = new Buyer("abc", 1234567, 600.0f);
-		assertEquals("abc", buyer.name);
-		assertEquals(1234567, buyer.phone);
-		assertEquals(true, (buyer.creditScore == 600.0f) );
+	public void testing_linkedlist_values() {
+        LinkedList list = new LinkedList();
+		list.insert(2);
+		list.insert(4);
+		list.insert(8);
+		list.insert(16);
+
+		assertEquals(4, list.size());
+
+		assertEquals(2, list.get(0));
+		assertEquals(4, list.get(1));
+		assertEquals(8, list.get(2));
+		assertEquals(16, list.get(3));
 	}
 }

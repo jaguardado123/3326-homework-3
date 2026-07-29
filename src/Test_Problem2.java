@@ -5,32 +5,27 @@ import problem2.*;
 public class Test_Problem2 {
 	
 	@Test
-	public void testing_name_attribute() {
-		Student s1 = new Student("Bob", "bob@uni.com");
-		Student s2 = new Student("Carl", "carl@uni.com");
-		assertEquals(false, s1.name == s2.name);
+	public void testing_condo() {
+		// Testing for inheritance
+		House parent = new House("456 Elm St", 1200.0f, 4);
+		Condo child = new Condo("123 Main St", 1000.0f, 3, "Building A", 101);
+		assertEquals(true, parent.getClass().isAssignableFrom(child.getClass()) );
 	}
 
 	@Test
-	public void testing_email_attribute() {
-		Student s1 = new Student("Bob", "bob@uni.com");
-		Student s2 = new Student("Carl", "carl@uni.com");
-		assertEquals(false, s1.email == s2.email);
+	public void testing_duplex() {
+		// Testing for inheritance
+		House parent = new House("456 Elm St", 1200.0f, 4);
+		Duplex child = new Duplex("789 Oak Ave", 800.0f, 2, true);
+		assertEquals(true, parent.getClass().isAssignableFrom(child.getClass()) );
 	}
 
 	@Test
-	public void testing_school_id_attribute() {
-		Student s1 = new Student("Bob", "bob@uni.com");
-		Student s2 = new Student("Carl", "carl@uni.com");
-		s1.school_id = "123";
-		s2.school_id = "456";
-		assertEquals(true, s1.school_id == s2.school_id);
+	public void testing_townhouse() {
+		// Testing for inheritance
+		House parent = new House("456 Elm St", 1200.0f, 4);
+		Townhouse child = new Townhouse("101 Pine Rd", 1500.0f, 5, false, 3);
+		assertEquals(true, parent.getClass().isAssignableFrom(child.getClass()) );
 	}
 
-	@Test
-	public void testing_info_method() {
-		Student s1 = new Student("Bob", "bob@uni.com");
-		s1.info();
-		assertEquals(true, true);
-	}
 }

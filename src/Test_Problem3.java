@@ -5,31 +5,26 @@ import problem3.*;
 public class Test_Problem3 {
 	
 	@Test
-	public void testing_input() {
-		IntVector vect = new IntVector();
-        vect.push_back(5);
-        vect.push_back(10);
-        assertEquals(5, vect.at(0));
-        assertEquals(10, vect.at(1));
+	public void testing_employee() {
+		// Testing for inheritance from
+		Member parent = new Member("John Doe", "123 Main St", 123456);
+		Employee child = new Employee("Jane Smith", "456 Oak Ave", 789012, 222333, 30000.0f);
+		assertEquals(true, parent.getClass().isAssignableFrom(child.getClass()) );
 	}
 
 	@Test
-	public void testing_remove() {
-		IntVector vect = new IntVector();
-        vect.push_back(5);
-        vect.push_back(10);
-        assertEquals(2, vect.size());
-        vect.pop_back();
-        assertEquals(1, vect.size());
+	public void testing_manager() {
+		// Testing for inheritance from
+		Employee parent = new Employee("Jane Smith", "456 Oak Ave", 789012, 222333, 30000.0f);
+        Manager child = new Manager("Alice Johnson", "789 Pine Rd", 345678, 444555, 50000.0f, "Sales");
+		assertEquals(true, parent.getClass().isAssignableFrom(child.getClass()) );
 	}
 
 	@Test
-	public void testing_resize() {
-		IntVector vect = new IntVector();
-        int size = 50;
-        for(int i = 0; i < size; i++) {
-            vect.push_back(i);
-        }
-        assertEquals(size, vect.size());
+	public void testing_regional_manager() {
+		// Testing for inheritance from
+        Manager parent = new Manager("Alice Johnson", "789 Pine Rd", 345678, 444555, 50000.0f, "Sales");
+        RegionalManager child = new RegionalManager("Bob Williams", "321 Cedar St", 901234, 666777, 70000.0f, "Operations", "Northwest", 10);
+		assertEquals(true, parent.getClass().isAssignableFrom(child.getClass()) );
 	}
 }
