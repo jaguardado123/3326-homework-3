@@ -135,7 +135,9 @@ public class Roadster extends SportsCar {
 
 ### Super Constructor
 
-Definition
+The super keyword can be used to reference or access class variables and members of the super or parent class, however it can also be used to call the constructor of a parent class.
+
+The parent constructor `super()` must be called within the subclass constructor and at the very beginning.
 
 **Example:**
 
@@ -163,6 +165,8 @@ public class Truck extends Car {
 }
 ```
 
+Learn more about super in Java visit: https://www.w3schools.com/java/java_super.asp and https://www.geeksforgeeks.org/java/super-keyword/
+
 <br>
 
 
@@ -170,44 +174,57 @@ public class Truck extends Car {
 
 ## Problem 1
 
-### Car Dealership
+### LinkedList - Composition
 
+For this homework problem you will need to create a LinkedList in Java. Use composition to create a Node object within your LinkedList class. Remember to encapsulate your head node to prevent unwanted tampering with your list.
 
+Create your Node class in the `problem1/Node.java` file and your LinkedIn class in the `problem1/LinkedList.java` file.
+
+Create the following **private** attribute in LinkedList:
+- `head`
+
+Create the following **public** methods in LinkedList:
+- `insert()`
+- `size()`
+- `get()`
+
+You can test your solution by running `Test_Problem1.java`.
 
 <br>
 
 ## Problem 2
 
-### Student Manager
+### Housing Orgainzer - Simple Inheritance
 
+Assume you are hired to work for a housing organization and you notice their developer has created a class for each house type: `Condo`, `Duplex`, and `Townhouse`. You then notice most of the attributes and methods within each class are the same.... interesting.
 
+Refactor the house classes in the `problem2/` package by creating a parent class `House` and removing any repetitive and redundant code.
+
+You can test your solution by running `Test_Problem2.java`.
 
 <br>
 
 ## Problem 3
 
-### Custom Vector Class
+### Employee Management - Chain Inheritance
 
+Assume you are now hired by a Credit Union that requires all of its employees to become members of credit union prior to employment (Obviously you had to enroll as well). Now they put you in charge of their employee management software and you notice they also have a class for each employee type: `Member`, `Employee`, `Manager`, `RegionalManger`. You also notice most attributes and methods also repeat.... interesting.
 
-<br>
+Refactor the empoyee classes in the `problem3/` package by using chain inheritance to remove any repetitive and redundant code.
 
-## Problem 4
-
-### Something
-
+You can test your solution by running `Test_Problem3.java`.
 
 <br>
 
 ## Grading Criteria
 | Criteria | Points |
 |---|---|
-| Problem 1 Car class missing or not packaged | -10 |
-| Problem 1 Buyer class missing or not packaged | -10 |
-| Problem 2 Student class missing or not packaged | -10 |
-| Problem 2 student_id is not static | -20 |
-| Problem 3 IntVector class is missing or not packaged | -20 |
-| Problem 3 IntVector class methods don't work or have incorrect access modifiers | -30 |
-| Problem 4 IntVector class is missing or not packaged | -20 |
-| Problem 4 IntVector class methods don't work or have incorrect access modifiers | -30 |
+| Problem 1 Node class is not inside Node.java | -10 |
+| Problem 1 LinkedList class does not pass the tests | -20 |
+| Problem 2 House class is not inside House.java | -10 |
+| Problem 2 Condo, Duplex, and Townhouse do not pass tests | -20 |
+| Problem 2 There is duplicate attributes | -10 |
+| Problem 3 Employee, Manager, RegionalManager don't pass tests | -20 |
+| Problem 3 There is duplicate attributes | -10 |
 
 [How to Submit Assignments to GitHub](https://joselitoguardado.dev/3326/How_to_Submit_Assignments_to_GitHub.pdf)
