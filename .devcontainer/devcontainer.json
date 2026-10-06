@@ -1,0 +1,5 @@
+{
+  "name": "Homework 3",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "postStartCommand": "bash .devcontainer/install-java-extension.sh"
+}
