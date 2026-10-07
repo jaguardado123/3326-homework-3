@@ -1,6 +1,6 @@
 # Homework 3
 
-In this homework you will practice working with **composition**, **simple inheritance**, **multiple inheritance**, **chain inheritance**, and **super**.
+In this homework you will practice working with **composition**, **simple inheritance**, **chain inheritance**, and **super**.
 
 ## Before you start
 
